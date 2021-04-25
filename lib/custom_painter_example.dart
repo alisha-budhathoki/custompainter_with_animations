@@ -46,7 +46,9 @@ class _CustomPaintExampleState extends State<CustomPaintExample>
         child: Stack(
           children: <Widget>[
             CustomPainterExampleWidgets.buildShape(),
-            CustomPainterExampleWidgets.buildBottomCircle()
+            CustomPainterExampleWidgets.buildBottomCircle(),
+            CustomPainterExampleWidgets.buildInsideRectangle()
+
             // CustomPainterExampleWidgets.buildButtonAnimation(
             //   height: _height / 2,
             //   width: _width / 2,

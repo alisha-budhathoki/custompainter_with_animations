@@ -1,6 +1,7 @@
 import 'package:custompainter_with_animations/custom_circle_class.dart';
 import 'package:flutter/material.dart';
 
+import '../custom_rectangle.dart';
 import '../green_clipper.dart';
 import '../my_painter.dart';
 
@@ -14,7 +15,29 @@ class CustomPainterExampleWidgets {
     );
   }
 
+  static Widget buildInsideRectangle() {
+    return Container(
+      child: Center(
+        child: CustomPaint(
+          size: Size(200, 200),
+          painter: CustomRectangle(),
+        ),
+      ),
+    );
+  }
+
   static Widget buildBottomCircle() {
+    return Container(
+      child: Center(
+        child: CustomPaint(
+          size: Size(200, 200),
+          painter: CustomCircle(),
+        ),
+      ),
+    );
+  }
+
+  static Widget insideSemiCircle() {
     return Container(
       child: Center(
         child: CustomPaint(
