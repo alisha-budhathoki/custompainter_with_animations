@@ -68,7 +68,6 @@ class _CustomPaintExampleState extends State<CustomPaintExample>
       body: Container(
         child: Stack(
           children: <Widget>[
-            // CustomPainterExampleWidgets.buildShape(),
             CustomPainterExampleWidgets.buildBottomCircle(),
             // InsideFace(),
             Positioned(
@@ -80,6 +79,8 @@ class _CustomPaintExampleState extends State<CustomPaintExample>
                 ],
               ),
             ),
+            CustomPainterExampleWidgets.buildShape(),
+
             Positioned(
               top: 200,
               left: animation.value,

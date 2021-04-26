@@ -4,15 +4,12 @@ class CurvePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint1 = Paint();
-    paint1.color = Colors.green[800];
-
-    paint1.style = PaintingStyle.fill;
 
     var path = Path();
 
     path.moveTo(0, size.height / 1.15);
     var firstControlPoint = new Offset(size.width / 4, size.height * 1.2);
-    var firstEndPoint = new Offset(size.width / 2.3, size.height / 1.1 - 0);
+    var firstEndPoint = new Offset(size.width / 2.3, size.height / 1.1);
     var secondControlPoint =
         new Offset(size.width - (size.width / 3), size.height / 1.6);
     var secondEndPoint = new Offset(size.width, size.height / 1.15);
@@ -28,6 +25,9 @@ class CurvePainter extends CustomPainter {
 
     path.lineTo(size.width, size.height / 1.11);
     // path.lineTo(size.width, 0);
+    paint1.color = Colors.green[800];
+
+    paint1.style = PaintingStyle.fill;
 
     canvas.drawPath(path, paint1);
   }

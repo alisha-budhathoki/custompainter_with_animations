@@ -17,8 +17,6 @@ class CustomCircle extends CustomPainter {
     var paint = Paint()
       ..color = color
       ..strokeWidth = 15;
-    print('saksaj' + size.width.toString());
-    print('fndjdf' + size.height.toString());
     Offset center = Offset(widthVal == null ? size.width / 2 : widthVal,
         heightVal == null ? size.height / 2 : heightVal);
     canvas.drawCircle(center, radius, paint);
@@ -26,8 +24,6 @@ class CustomCircle extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    // throw UnimplementedError();
     return false;
   }
 }

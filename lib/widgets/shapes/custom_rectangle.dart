@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 class CustomRectangle extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
-    // TODO: implement paint
     var paint = Paint()
       ..color = Colors.white
       ..strokeWidth = 15;
@@ -18,8 +17,6 @@ class CustomRectangle extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // TODO: implement shouldRepaint
-    // throw UnimplementedError();
     return false;
   }
 }

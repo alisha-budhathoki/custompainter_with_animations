@@ -1,4 +1,5 @@
 import 'package:custompainter_with_animations/widgets/shapes/custom_circle_class.dart';
+import 'package:custompainter_with_animations/widgets/shapes/custom_curver_clipper.dart';
 import 'package:custompainter_with_animations/widgets/shapes/custom_semi_circle.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +10,16 @@ import '../my_painter.dart';
 
 class CustomPainterExampleWidgets {
   static Widget buildShape() {
-    return ClipPath(
-      clipper: CustomShapeClass(),
+    return Center(
       child: Container(
-        color: Colors.orange.withOpacity(0.7),
+        width: 100,
+        height: 50,
+        child: ClipPath(
+          clipper: CustomShapeClass(),
+          child: Container(
+            color: Colors.white.withOpacity(0.7),
+          ),
+        ),
       ),
     );
   }
@@ -88,6 +95,24 @@ class CustomPainterExampleWidgets {
       child: Center(
         child: CustomPaint(size: Size(100, 100), painter: CurvePainter()),
       ),
+    );
+  }
+
+  static Widget curve2() {
+    return TweenAnimationBuilder(
+      child: Container(
+        height: 100,
+        color: Colors.white,
+      ),
+      curve: Curves.elasticOut,
+      tween: Tween(begin: -50.0, end: 0.0),
+      duration: Duration(seconds: 2),
+      builder: (context, value, child) {
+        return ClipPath(
+          child: child,
+          clipper: BottomWaveClipper(value: value),
+        );
+      },
     );
   }
 
