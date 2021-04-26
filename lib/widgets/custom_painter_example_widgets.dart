@@ -1,8 +1,10 @@
-import 'package:custompainter_with_animations/custom_circle_class.dart';
+import 'package:custompainter_with_animations/widgets/shapes/custom_circle_class.dart';
+import 'package:custompainter_with_animations/widgets/shapes/custom_semi_circle.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_rectangle.dart';
+import 'shapes/custom_rectangle.dart';
 import '../green_clipper.dart';
+import 'shapes/curve_painter.dart';
 import '../my_painter.dart';
 
 class CustomPainterExampleWidgets {
@@ -19,7 +21,7 @@ class CustomPainterExampleWidgets {
     return Container(
       child: Center(
         child: CustomPaint(
-          size: Size(200, 200),
+          size: Size(200, 150),
           painter: CustomRectangle(),
         ),
       ),
@@ -37,13 +39,54 @@ class CustomPainterExampleWidgets {
     );
   }
 
-  static Widget insideSemiCircle() {
+  static Widget buildLeftEye() {
     return Container(
       child: Center(
         child: CustomPaint(
           size: Size(200, 200),
-          painter: CustomCircle(),
+          painter: CustomCircle(
+              radius: 10, color: Colors.black, widthVal: 90, heightVal: 60),
         ),
+      ),
+    );
+  }
+
+  static Widget buildRightEye() {
+    return Container(
+      child: Center(
+        child: CustomPaint(
+          size: Size(200, 200),
+          painter: CustomCircle(
+              radius: 10, color: Colors.black, widthVal: 120, heightVal: 60),
+        ),
+      ),
+    );
+  }
+
+  static Widget buildMouth() {
+    return Container(
+      child: Center(
+        child: CustomPaint(
+          size: Size(200, 200),
+          painter: CustomCircle(
+              radius: 5, color: Colors.black, widthVal: 110, heightVal: 87),
+        ),
+      ),
+    );
+  }
+
+  static Widget semiCircle() {
+    return Container(
+      child: Center(
+        child: CustomPaint(size: Size(200, 200), painter: CustomSemiCircle()),
+      ),
+    );
+  }
+
+  static Widget curve() {
+    return Container(
+      child: Center(
+        child: CustomPaint(size: Size(100, 100), painter: CurvePainter()),
       ),
     );
   }
