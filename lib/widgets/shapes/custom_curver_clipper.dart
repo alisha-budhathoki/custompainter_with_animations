@@ -28,6 +28,7 @@ class BottomWaveClipper extends CustomClipper<Path> {
   }
 
   @override
-  bool shouldReclip(CustomClipper<Path> oldClipper) =>
-      oldClipper is BottomWaveClipper && value != oldClipper.value;
+  bool shouldReclip(CustomClipper<Path> oldClipper) {
+    return oldClipper is BottomWaveClipper && value != oldClipper.value;
+  }
 }

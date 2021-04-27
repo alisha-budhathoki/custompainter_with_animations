@@ -6,11 +6,12 @@ class CustomCircle extends CustomPainter {
   final double radius;
   final Color color;
 
-  const CustomCircle(
-      {this.widthVal,
-      this.heightVal,
-      this.radius = 150.0,
-      this.color = Colors.teal});
+  const CustomCircle({
+    this.widthVal,
+    this.heightVal,
+    this.radius = 150.0,
+    this.color = Colors.black87,
+  });
 
   @override
   void paint(Canvas canvas, Size size) {

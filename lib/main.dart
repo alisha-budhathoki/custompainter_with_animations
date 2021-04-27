@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/shapes/custom_painter_example.dart';
+import 'screens/home_example.dart';
 
 void main() => runApp(new MyApp());
 
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(),
-      home: CustomPaintExample(),
+      home: HomeScreenExample(),
       debugShowCheckedModeBanner: false,
     );
   }

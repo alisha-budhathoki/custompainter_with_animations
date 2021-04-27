@@ -18,15 +18,8 @@ class CurvePainter extends CustomPainter {
         firstEndPoint.dx, firstEndPoint.dy);
     path.quadraticBezierTo(secondControlPoint.dx, secondControlPoint.dy,
         secondEndPoint.dx, secondEndPoint.dy);
-
-    // path.lineTo(size.width, size.height / 6);
-    // path.lineTo(size.width, 0);
-    // canvas.drawPath(path, paint);
-
     path.lineTo(size.width, size.height / 1.11);
-    // path.lineTo(size.width, 0);
     paint1.color = Colors.green[800];
-
     paint1.style = PaintingStyle.fill;
 
     canvas.drawPath(path, paint1);
@@ -35,6 +28,5 @@ class CurvePainter extends CustomPainter {
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
     return true;
-    // TODO: implement shouldRepaint
   }
 }
